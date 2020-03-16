@@ -4,14 +4,26 @@
   <title>WEB1 - HTML</title>
   <meta charset="utf-8">
 <style>
-a{/*selector 선택자 declaration  선언,효과*/
-  color:black;/*property속성 : value값 */
-  text-decoration: none;
-}
-h1{
-  font-size: 45px;
-  text-align: center;
-}
+  /*
+  selector 선택자 declaration  선언,효과
+  우선순위 id > class > 태그 선택자
+  */
+  a{
+    /*property속성 : value값 */
+    color:black;
+      text-decoration: none;
+  }
+  #active{
+    color:red;
+  }
+  .saw{
+    color:gray;
+  }
+  h1{
+    font-size: 45px;
+    text-align: center;
+  }
+
 </style>
 
 </head>
@@ -19,8 +31,8 @@ h1{
   아아아아
   <h1><a href="index.html">WEB</a></h1>
   <ol>
-    <li><a href="1.html">HTML</a></li>
-    <li><a href="2.html" style="color:red;text-decoration: underline;">CSS</a></li>
+    <li><a href="1.html" class="saw">HTML</a></li>
+    <li><a href="2.html" class="saw" id="active">CSS</a></li>
     <li><a href="3.html">JavaScript</a></li>
   </ol>
   <h2>HTML</h2>
