@@ -1,25 +1,29 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>WEB1 - html</title>
-  </head>
-  <body>
-    <!--ul은 unordered list의 약자이고,
-ol은 ordered list의 약자랍니다.-->
-<h1><a href="index.html">WEB</a></h1>
- <ol>
-   <li><a href="1.html">HTML</a></li>
-   <li><a href="2.html">CSS</a></li>
-   <li><a href="3.html">JavaScript</a></li>
- </ol>
- <h2>CSS</h2>
+<!doctype html>
+<html>
+<head>
+  <title>WEB1 - HTML</title>
+  <meta charset="utf-8">
+<link rel="stylesheet" href="style.css">
 
-<p>
-  <strong>CSS 개요</strong><br>
-웹 페이지의 스타일과 내용적인 부분을 서로 분리해 놓은 서식을 스타일 시트라고 합니다.<br>
+</head>
+<body>
 
-이러한 스타일 시트를 이용하면 웹 페이지의 스타일을 편리하게 개발할 수 있습니다.
-</p>
-</body>
-</html>
+  <h1><a href="index.html">WEB</a></h1>
+  <div id="grid">
+  <ol>
+    <li><a href="1.html" class="saw">HTML</a></li>
+    <li><a href="2.html" class="saw" id="active">CSS</a></li>
+    <li><a href="3.html">JavaScript</a></li>
+  </ol>
+    <div id="article">
+      <h2>CSS</h2>
+
+      <p>
+        <strong>CSS 개요</strong><br>
+      웹 페이지의 스타일과 내용적인 부분을 서로 분리해 놓은 서식을 스타일 시트라고 합니다.<br>
+
+      이러한 스타일 시트를 이용하면 웹 페이지의 스타일을 편리하게 개발할 수 있습니다.
+      </p>
+    </div>
+  </div>
+<script>
