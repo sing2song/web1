@@ -3,16 +3,37 @@
   <head>
     <meta charset="utf-8">
     <title>WEB1 - html</title>
-    <link rel="stylesheet" href="style.css">
+    
 <!--
   cashing: 한번 저장 하면 다시 리로드안해도됨 사용료를 적게 낼 수 있음
   효율적인 코드를 만들기 위해서는 css파일은 새파일로 꺼내두는 것이 좋음
 -->
+
+
   </head>
-  <body>
+  <body id="target">
     <!--ul은 unordered list의 약자이고,
 ol은 ordered list의 약자랍니다.-->
 <h1><a href="index.html">WEB</a></h1>
+
+<!--리팩토링(refactorying) : 중복코드를 낮추고 개선하는 작업-->
+
+<input  type="button" value="night" onclick="
+  var target=document.querySelector('body');
+  
+  if(this.value =='night'){
+    target.style.backgroundColor='black';
+    target.style.color='white';
+    this.value='day';
+
+  }else{
+    target.style.backgroundColor='white';
+    target.style.color='black';
+    this.value='night';
+    
+  }
+">
+
 <div id="grid">
  <ol>
    <li><a href="1.html">HTML</a></li>
@@ -33,5 +54,18 @@ Node.js와 같은 프레임워크를 사용하면 서버 측 프로그래밍에�
 </p>
 </div>
 </div>
+
+<input type="button" value="night" onclick="
+  if(this.value =='night'){
+    document.querySelector('#target').style.backgroundColor='black';
+    document.querySelector('body').style.color='white';
+    this.value='day';
+  }else{
+    document.querySelector('body').style.backgroundColor='white';
+    document.querySelector('body').style.color='black';
+    this.value='night';
+  }
+">
+
 </body>
 </html>
