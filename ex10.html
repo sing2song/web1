@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Object</h1>
+        <h4>::이름이 있는 정리상자</h4>
+        <h2>Create</h2>
+        <script>
+            var coworkers={
+            "programmer":"song",
+            "designer":"won"
+            };
+            document.write("programmer : "+coworkers.programmer+"<br>");
+            document.write("designer : "+coworkers.designer+"<br>");
+            coworkers.bookkeeper="me";
+            document.write("bookkeeper : "+coworkers.bookkeeper+"<br>");
+            coworkers["data scientist"]="hoho";
+            document.write("data scientist : "+coworkers["data scientist"]+"<br>");
+            
+        </script>
+        <h2>Iterate</h2>
+        <script>
+            for(var key in coworkers){
+                document.write(key+' : '+coworkers[key]+'<br>');
+                //순서대로 출력 X
+            }
+        </script>
+
+        <h2>Property & Method</h2>
+        <script>
+            coworkers.showAll = function(){
+                
+                for(var key in this){//this는 coworkers
+                    //if로  show를 제외한다는 코드를 넣어야한다
+                    document.write(key+' : '+this[key]+'<br>');
+                    //순서대로 출력 X
+                }
+            }
+            coworkers.showAll();
+            //showAll이 coworkers에 포함 되어있으므로 key in this 사용시 showAll을 키값으로 하여 코드값을 그대로 보여준다
+        </script>
+    </body>
+</html>
