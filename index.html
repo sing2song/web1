@@ -44,13 +44,13 @@ ol{
 </head>
 <body>
   아아아아
-  <h1><a href="index.html">WEB</a></h1>
+  <h1><a href="#welcome">WEB</a></h1>
   <ol>
-    <li><a onclick="fetchPage('html')
+    <li><a href ="#!html" onclick="fetchPage('html')
     ">HTML</a></li>
-    <li><a onclick="fetchPage('css')
+    <li><a href ="#!css" onclick="fetchPage('css')
     ">CSS</a></li>
-    <li><a onclick="fetchPage('JavaScript')
+    <li><a href ="#!javascript" onclick="fetchPage('javascript')
     ">JavaScript</a></li>
   </ol>
   <article>
@@ -63,6 +63,13 @@ ol{
           document.querySelector('article').innerHTML = text;
         })
       });
+  }
+//초기페이지 로딩
+/* 해시를 넣은 링크를 받았을 때 해당하는 html을 출력하도록 */
+  if(location.href){
+    fetchPage(location.href.substr(2));
+  }else{
+    fetchPage('welcome');
   }
 </script>
   <div id="disqus_thread"></div>

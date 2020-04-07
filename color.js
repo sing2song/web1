@@ -7,6 +7,7 @@ var Links={
     //   alist[i].style.color = color;
     //   i = i + 1;
     // }
+    //위를 한꺼번에 정리한 jQuery를 사용한 예
     $('a').css('color',color);
   }
 }
