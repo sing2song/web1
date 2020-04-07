@@ -44,7 +44,7 @@ ol{
 </head>
 <body>
   아아아아
-  <h1><a href="#welcome">WEB</a></h1>
+  <h1><a href="#!welcome">WEB</a></h1>
   <ol>
     <li><a href ="#!html" onclick="fetchPage('html')
     ">HTML</a></li>
@@ -69,10 +69,13 @@ ol{
   if(location.href){
     fetchPage(location.href.substr(2));
   }else{
+    /*북마크없는 링크를 받았을때 welcome.html가 뜨도록 함수처리 */
     fetchPage('welcome');
   }
 </script>
   <div id="disqus_thread"></div>
+
+<!--
 <script>
 
 /**
@@ -93,6 +96,6 @@ s.setAttribute('data-timestamp', +new Date());
 </script>
 
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-                            
+     -->                  
 </body>
 </html>
