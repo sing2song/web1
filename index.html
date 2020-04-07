@@ -66,8 +66,8 @@ ol{
   }
 //초기페이지 로딩
 /* 해시를 넣은 링크를 받았을 때 해당하는 html을 출력하도록 */
-  if(location.href){
-    fetchPage(location.href.substr(2));
+  if(location.hash){
+    fetchPage(location.hash.substr(2));
   }else{
     /*북마크없는 링크를 받았을때 welcome.html가 뜨도록 함수처리 */
     fetchPage('welcome');
